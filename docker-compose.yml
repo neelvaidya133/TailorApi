@@ -1,0 +1,26 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    depends_on:
+      - db
+    command: ["./post.sh", "db", "npm", "start"]
+    ports:
+      - "5500:5500"
+    environment:
+      DATABASE_URL: "postgres://postgres:root@db:5432/tailors"
+      JWT_SECRET: "tailorData"
+      PORT: "3000"  # Corrected format here
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "root"
+      POSTGRES_DB: "tailors"
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
