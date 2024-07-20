@@ -11,6 +11,9 @@ const app = express();
 app.use(cors());
 const pgPool = new Pool({
   connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false, // for development only; handle certificates properly for production
+  },
 });
 
 app.use(
