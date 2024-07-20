@@ -11,7 +11,7 @@ app.use(cors());
 
 app.use(
   postgraphile(
-    process.env.DATABASE_URL || "postgres://postgres:root@localhost:5432/mydb",
+    process.env.DATABASE_URL || "postgresql://demo_example_user:pqCTUXbs5rhWaOsTXPBHIMVRD0WKmZfm@dpg-cqdm148gph6c73a8nb70-a/demo_example",
     "public",
     {
       watchPg: true,
