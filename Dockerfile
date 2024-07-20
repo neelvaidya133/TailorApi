@@ -1,12 +1,16 @@
-FROM node:18
+FROM node:14
 
 WORKDIR /usr/src/app
 
 
-COPY . .
+COPY package*.json ./
 
 RUN npm install
 
-EXPOSE 5500
 
-CMD [ "node", "index.js" ]
+COPY . .
+
+EXPOSE 3500
+
+CMD ["node", "index.js"]
+
