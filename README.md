@@ -82,6 +82,19 @@ This project was developed by Neel Vaidya (https://github.com/neelvaidya133). Sp
 <h2>💻 Additional Details </h2>
 
 The Frontend repository for this project is also built and deployed by me. You can find the Frontend repo and more information [here](https://github.com/neelvaidya133/Tailor).
+
+
+## Basic Sequence Diagram
+Below is the sequence diagram illustrating the flow of data within the application:
+
+Sequence Diagram : (/Sequnce_Diagram_Tailor'sData.png)
+
+## Flow Chart
+The following flow chart represents the workflow of the Tailor's Data Application:
+
+Flow Chart: (/Flow_Chart_Tailor'sData.png)
+
+
 <h2>🛡️ License:</h2>
 
 This project is licensed under the MIT LICENSE
